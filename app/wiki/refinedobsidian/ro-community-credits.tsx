@@ -1,5 +1,5 @@
 import { Code, Users } from "lucide-react"
-import {LINKS} from "@/app/links";
+import {LINKS} from "@/app/links"
 
 export function CommunityCredits() {
   return (

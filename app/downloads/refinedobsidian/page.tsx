@@ -12,8 +12,8 @@ import {Badge} from "@/components/ui/badge"
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip"
 import {useTheme} from "next-themes"
 import {useToast} from "@/hooks/use-toast"
-import {LINKS} from "@/app/links";
-import {Footer} from "@/app/wiki/refinedobsidian/ro-footer";
+import {LINKS} from "@/app/links"
+import {Footer} from "@/app/wiki/refinedobsidian/ro-footer"
 
 // Define version data with more metadata
 const versions = {
@@ -120,12 +120,12 @@ export default function RODownloadsPage() {
                         <span className="text-xl font-bold text-primary">RefinedObsidian</span>
                     </div>
                     <div className="hidden md:flex items-center gap-6">
-                        <Link href="/wiki/refinedobsidian" className="text-sm font-medium hover-lift relative group">
+                        <Link href="/wiki/refinedobsidian" className="text-sm font-medium ro-hover-lift relative group">
                             Wiki
                             <span
                                 className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform"></span>
                         </Link>
-                        <Link href="/downloads/refinedobsidian" className="text-sm font-medium hover-lift relative group">
+                        <Link href="/downloads/refinedobsidian" className="text-sm font-medium ro-hover-lift relative group">
                             Downloads
                             <span
                                 className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary scale-x-100 transition-transform"></span>
