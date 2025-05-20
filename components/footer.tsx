@@ -9,7 +9,7 @@ export function Footer() {
         <footer className="border-t border-border/40 bg-background py-6 theme-transition mt-12">
             <div className="container flex flex-col items-center gap-2 md:flex-row md:justify-between">
                 <div className="flex items-center gap-2">
-                    <Image src="/assets/icon.png" alt="RefinedObsidian Icon" width={20} height={20}
+                    <Image src="/assets/refinedobsidian/icon.png" alt="RefinedObsidian Icon" width={20} height={20}
                            className="animate-pulse-glow"/>
                     <span className="text-lg font-semibold text-primary">RefinedObsidian</span>
                 </div>

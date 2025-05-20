@@ -7,7 +7,7 @@ export function CommunityCredits() {
       <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/20 mb-1">
         <Users className="h-6 w-6 text-primary" />
       </div>
-      <h3 className="text-sm font-medium">This mod is made by</h3>
+      <h3 className="text-sm font-medium">This Mod is made by</h3>
         <a href={LINKS.github_org} target="_blank" rel="noopener noreferrer" className="text-primary">
       <p className="text-xs font-semibold text-primary">EmberForge Development</p>
         </a>
