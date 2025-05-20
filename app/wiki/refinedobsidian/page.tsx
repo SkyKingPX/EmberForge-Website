@@ -1,5 +1,6 @@
 "use client"
 
+import styles from '../../styles/ro.module.css'
 import Image from "next/image"
 import Link from "next/link"
 import {
@@ -14,7 +15,7 @@ import {
     Flame,
     Scissors, Download,
 } from "lucide-react"
-import {Footer} from "@/components/footer"
+import {Footer} from "@/app/wiki/refinedobsidian/ro-footer"
 import {useTheme} from "next-themes"
 import {useEffect, useState} from "react"
 import {LINKS} from "@/app/links"
