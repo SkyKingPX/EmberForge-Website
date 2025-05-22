@@ -498,7 +498,7 @@ export default function ROWikiPage() {
                             <div
                                 className="overflow-hidden rounded-lg border border-border/50 group ro-hover-glow theme-transition">
                                 <Image
-                                    src="/assets/refinedobsidian/gallery-1.png"
+                                    src="/assets/refinedobsidian/gallery-1.jpg"
                                     alt="RefinedObsidian Overview"
                                     width={500}
                                     height={300}
@@ -508,7 +508,7 @@ export default function ROWikiPage() {
                             <div
                                 className="overflow-hidden rounded-lg border border-border/50 group ro-hover-glow theme-transition">
                                 <Image
-                                    src="/assets/refinedobsidian/gallery-2.png"
+                                    src="/assets/refinedobsidian/gallery-2.jpg"
                                     alt="Block Palette"
                                     width={500}
                                     height={300}
@@ -518,7 +518,7 @@ export default function ROWikiPage() {
                             <div
                                 className="overflow-hidden rounded-lg border border-border/50 group ro-hover-glow theme-transition">
                                 <Image
-                                    src="/assets/refinedobsidian/gallery-3.png"
+                                    src="/assets/refinedobsidian/gallery-3.jpg"
                                     alt="Building"
                                     width={500}
                                     height={300}

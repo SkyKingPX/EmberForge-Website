@@ -4,7 +4,7 @@ import {LINKS} from "@/app/links"
 export function CommunityCredits() {
   return (
     <div className="credits-badge rounded-lg p-4 flex flex-col items-center text-center space-y-2">
-      <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/20 mb-1">
+      <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary mb-1">
         <Users className="h-6 w-6 text-primary" />
       </div>
       <h3 className="text-sm font-medium">This Mod is made by</h3>
