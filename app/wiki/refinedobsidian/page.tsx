@@ -1,5 +1,6 @@
 "use client"
 
+import "@/app/styles/ro.css"
 import Head from "next/head"
 import Image from "next/image"
 import Link from "next/link"
@@ -11,7 +12,6 @@ import {
     Menu,
     Package,
     Pickaxe,
-    Search,
     Flame,
     Scissors, Download,
 } from "lucide-react"
