@@ -224,7 +224,7 @@ export default function ROWikiPage() {
                                     blocks and armor trims.
                                 </p>
                                 <div className="mt-6 flex flex-wrap justify-center gap-4">
-                                    <Link href="/downloads">
+                                    <Link href="/downloads/refinedobsidian">
                                         <Button
                                             className="bg-primary hover:bg-primary/80 text-primary-foreground transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg hover:shadow-primary/20">
                                             Download Mod
@@ -595,7 +595,7 @@ export default function ROWikiPage() {
                                     </p>
                                 </div>
                                 <div className="flex gap-4">
-                                    <Link href="/downloads">
+                                    <Link href="/downloads/refinedobsidian">
                                         <Button
                                             variant="outline"
                                             className="border-primary text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-105"

@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -26,11 +36,11 @@
     --radius: 0.5rem;
   }
   .dark {
-    --background: 27 100% 10%;
+    --background: 27 100% 5%;
     --foreground: 0 0% 98%;
-    --card: 27 100% 12%;
+    --card: 27 100% 7%;
     --card-foreground: 0 0% 98%;
-    --popover: 27 100% 12%;
+    --popover: 27 100% 7%;
     --popover-foreground: 0 0% 98%;
     --primary: 29 90% 58%;
     --primary-foreground: 27 100% 10%;
