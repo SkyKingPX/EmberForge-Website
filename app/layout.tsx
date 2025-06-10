@@ -7,8 +7,8 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "RefinedObsidian Wiki",
-  description: "Wiki for the RefinedObsidian Minecraft Mod by EmberForge Development",
+  title: "EmberForge Development",
+  description: "The official EmberForge Development Website",
 }
 
 export default function RootLayout({

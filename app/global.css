@@ -2,9 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* --- RO THEME (Purple) --- */
 @layer base {
-  .ro-theme {
+  :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
@@ -27,7 +26,7 @@
     --radius: 0.5rem;
   }
 
-  .ro-theme.dark {
+  .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
     --card: 240 10% 3.9%;
@@ -50,156 +49,6 @@
   }
 }
 
-@keyframes ro-pulse-glow {
-  0%,
-  100% {
-    filter: drop-shadow(0 0 0.5rem rgba(168, 85, 247, 0.2));
-  }
-  50% {
-    filter: drop-shadow(0 0 1rem rgba(168, 85, 247, 0.5));
-  }
-}
-
-/* Credits badge (RO) */
-.ro-credits-badge {
-  background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(168, 85, 247, 0.1) 100%);
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(168, 85, 247, 0.3);
-  transition: all 0.3s ease;
-}
-
-.ro-credits-badge:hover {
-  background: linear-gradient(135deg, rgba(168, 85, 247, 0.3) 0%, rgba(168, 85, 247, 0.2) 100%);
-  border: 1px solid rgba(168, 85, 247, 0.5);
-  transform: translateY(-2px);
-}
-
-/* Hover effects (RO) */
-.ro-hover-scale:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 25px -5px rgba(168, 85, 247, 0.2);
-}
-
-.ro-hover-glow:hover {
-  box-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
-}
-
-.ro-hover-scale {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.ro-hover-lift {
-  transition: transform 0.3s ease;
-}
-
-.ro-hover-lift:hover {
-  transform: translateY(-3px);
-}
-
-.ro-hover-glow {
-  transition: box-shadow 0.3s ease;
-}
-
-/* --- EF THEME (Orange) --- */
-@layer base {
-  .ef-theme {
-    --background: 0 0% 100%;
-    --foreground: 27 100% 15%;
-    --card: 0 0% 100%;
-    --card-foreground: 27 100% 15%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 27 100% 15%;
-    --primary: 29 90% 58%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 30 95% 85%;
-    --secondary-foreground: 30 100% 15%;
-    --muted: 30 50% 92%;
-    --muted-foreground: 27 25% 40%;
-    --accent: 29 90% 58%;
-    --accent-foreground: 27 100% 15%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 30 100% 60%;
-    --input: 30 50% 90%;
-    --ring: 29 90% 58%;
-    --radius: 0.5rem;
-  }
-
-  .ef-theme.dark {
-    --background: 27 100% 10%;
-    --foreground: 0 0% 98%;
-    --card: 27 100% 12%;
-    --card-foreground: 0 0% 98%;
-    --popover: 27 100% 12%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 29 90% 58%;
-    --primary-foreground: 27 100% 10%;
-    --secondary: 27 80% 25%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 27 80% 20%;
-    --muted-foreground: 30 30% 70%;
-    --accent: 29 90% 58%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 30 100% 60%;
-    --input: 30 30% 20%;
-    --ring: 29 90% 58%;
-  }
-}
-
-@keyframes ef-pulse-glow {
-  0%,
-  100% {
-    filter: drop-shadow(0 0 0.5rem rgba(246, 133, 49, 0.2));
-  }
-  50% {
-    filter: drop-shadow(0 0 1rem rgba(246, 133, 49, 0.5));
-  }
-}
-
-/* Credits badge (EF) */
-.ef-credits-badge {
-  background: linear-gradient(135deg, rgba(246, 133, 49, 0.2) 0%, rgba(246, 133, 49, 0.1) 100%);
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(246, 133, 49, 0.3);
-  transition: all 0.3s ease;
-}
-
-.ef-credits-badge:hover {
-  background: linear-gradient(135deg, rgba(246, 133, 49, 0.3) 0%, rgba(246, 133, 49, 0.2) 100%);
-  border: 1px solid rgba(246, 133, 49, 0.5);
-  transform: translateY(-2px);
-}
-
-/* Hover effects (EF) */
-.ef-hover-scale:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 25px -5px rgba(246, 133, 49, 0.2);
-}
-
-.ef-hover-glow:hover {
-  box-shadow: 0 0 15px rgba(246, 133, 49, 0.5);
-}
-
-.ef-hover-scale {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.ef-hover-lift {
-  transition: transform 0.3s ease;
-}
-
-.ef-hover-lift:hover {
-  transform: translateY(-3px);
-}
-
-.ef-hover-glow {
-  transition: box-shadow 0.3s ease;
-}
-
-/* GENERAL STYLES */
-
 @layer base {
   * {
     @apply border-border;
@@ -210,10 +59,22 @@
   }
 }
 
+/* Add smooth scrolling behavior */
 @layer base {
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px;
+    scroll-padding-top: 80px; /* Adjust based on your header height */
+  }
+}
+
+/* Custom animations */
+@keyframes pulse-glow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 0.5rem rgba(168, 85, 247, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 0 1rem rgba(168, 85, 247, 0.5));
   }
 }
 
@@ -251,4 +112,44 @@
 /* Theme transition */
 .theme-transition {
   transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Hover effects */
+.hover-scale {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px -5px rgba(168, 85, 247, 0.2);
+}
+
+.hover-lift {
+  transition: transform 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-3px);
+}
+
+.hover-glow {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
+}
+
+/* Credits badge */
+.credits-badge {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(168, 85, 247, 0.1) 100%);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  transition: all 0.3s ease;
+}
+
+.credits-badge:hover {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.3) 0%, rgba(168, 85, 247, 0.2) 100%);
+  border: 1px solid rgba(168, 85, 247, 0.5);
+  transform: translateY(-2px);
 }

@@ -1,5 +1,6 @@
 "use client"
 
+import Head from "next/head"
 import Image from "next/image"
 import Link from "next/link"
 import {
@@ -79,10 +80,14 @@ export default function ROWikiPage() {
     }, [recipeType])
 
     return (
-        <div className="ro-theme min-h-screen theme-transition">
+        <div className="min-h-screen theme-transition">
             {/* Header */}
+            <Head>
+                <title>RefinedObsidian Wiki</title>
+                <meta name="description" content="The official Wiki for the RefinedObsidian Mod by EmberForge Development" />
+            </Head>
             <header
-                className="sticky top-0 z-50 w-full border-b border-border/40 bg-ro-background/95 backdrop-blur theme-transition">
+                className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur theme-transition">
                 <div className="container flex h-16 items-center justify-between">
                     <div className="flex items-center gap-2">
                         <Image
@@ -90,20 +95,20 @@ export default function ROWikiPage() {
                             alt="RefinedObsidian Icon"
                             width={24}
                             height={24}
-                            className="animate-ro-pulse-glow"
+                            className="animate-pulse-glow"
                         />
                         <span className="text-xl font-bold text-primary">RefinedObsidian</span>
                     </div>
                     <div className="hidden md:flex items-center gap-6">
-                        <Link href="/wiki/refinedobsidian" className="text-sm font-medium ro-hover-lift relative group">
+                        <Link href="/wiki/refinedobsidian" className="text-sm font-medium hover-lift relative group">
                             Wiki
                             <span
-                                className="absolute inset-x-0 -bottom-1 h-0.5 bg-ro-primary scale-x-100 transition-transform"></span>
+                                className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary scale-x-100 transition-transform"></span>
                         </Link>
-                        <Link href="/downloads/refinedobsidian" className="text-sm font-medium ro-hover-lift relative group">
+                        <Link href="/downloads/refinedobsidian" className="text-sm font-medium hover-lift relative group">
                             Downloads
                             <span
-                                className="absolute inset-x-0 -bottom-1 h-0.5 bg-ro-primary scale-x-0 group-hover:scale-x-100 transition-transform"></span>
+                                className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform"></span>
                         </Link>
                         <div className="flex items-center gap-2">
                             <ThemeToggle/>
@@ -111,7 +116,7 @@ export default function ROWikiPage() {
                     </div>
                     <div className="flex items-center gap-2 md:hidden">
                         <ThemeToggle/>
-                        <Button variant="ghost" size="icon" className="hover:bg-ro-secondary transition-colors">
+                        <Button variant="ghost" size="icon" className="hover:bg-secondary transition-colors">
                             <Menu className="h-5 w-5"/>
                         </Button>
                     </div>
@@ -129,55 +134,55 @@ export default function ROWikiPage() {
                                 <div className="space-y-1">
                                     <Link href="#overview" className="w-full">
                                         <Button variant="ghost" size="sm"
-                                                className="w-full justify-start gap-2 ro-hover-lift group">
+                                                className="w-full justify-start gap-2 hover-lift group">
                                             <FileText className="h-4 w-4 transition-transform group-hover:scale-110"/>
                                             <span>Overview</span>
                                         </Button>
                                     </Link>
                                     <Link href="#features" className="w-full">
                                         <Button variant="ghost" size="sm"
-                                                className="w-full justify-start gap-2 ro-hover-lift group">
+                                                className="w-full justify-start gap-2 hover-lift group">
                                             <FileText className="h-4 w-4 transition-transform group-hover:scale-110"/>
                                             <span>Features</span>
                                         </Button>
                                     </Link>
                                     <Link href="#crafting" className="w-full">
                                         <Button variant="ghost" size="sm"
-                                                className="w-full justify-start gap-2 ro-hover-lift group">
+                                                className="w-full justify-start gap-2 hover-lift group">
                                             <Pickaxe className="h-4 w-4 transition-transform group-hover:scale-110"/>
                                             <span>Crafting</span>
                                         </Button>
                                     </Link>
                                     <Link href="#compatibility" className="w-full">
                                         <Button variant="ghost" size="sm"
-                                                className="w-full justify-start gap-2 ro-hover-lift group">
+                                                className="w-full justify-start gap-2 hover-lift group">
                                             <Package className="h-4 w-4 transition-transform group-hover:scale-110"/>
                                             <span>Compatibility</span>
                                         </Button>
                                     </Link>
                                     <Link href="#installation" className="w-full">
                                         <Button variant="ghost" size="sm"
-                                                className="w-full justify-start gap-2 ro-hover-lift group">
+                                                className="w-full justify-start gap-2 hover-lift group">
                                             <Download className="h-4 w-4 transition-transform group-hover:scale-110"/>
                                             <span>Download</span>
                                         </Button>
                                     </Link>
                                 </div>
                             </div>
-                            <Separator className="bg-ro-border/50"/>
+                            <Separator className="bg-border/50"/>
 
                             {/* Community Credits */}
                             <CommunityCredits/>
 
                             {/* Animated sidebar element */}
-                            <div className="mt-8 rounded-lg border border-border/50 bg-ro-card p-4 ro-hover-glow">
+                            <div className="mt-8 rounded-lg border border-border/50 bg-card p-4 hover-glow">
                                 <div className="flex justify-center mb-3">
                                     <Image
                                         src="/assets/refinedobsidian/ro-icon.png"
                                         alt="RefinedObsidian Icon"
                                         width={48}
                                         height={48}
-                                        className="animate-ro-pulse-glow"
+                                        className="animate-pulse-glow"
                                     />
                                 </div>
                                 <h3 className="text-center text-sm font-medium">Join our Discord</h3>
@@ -186,7 +191,7 @@ export default function ROWikiPage() {
                                 </p>
                                 <a href="https://discord.gg/3ENgHTEcmT" target="_blank" rel="noopener noreferrer">
                                     <Button size="sm"
-                                            className="w-full mt-3 bg-ro-primary/90 hover:bg-ro-primary transition-colors">
+                                            className="w-full mt-3 bg-primary/90 hover:bg-primary transition-colors">
                                         Join Now
                                     </Button>
                                 </a>
@@ -200,7 +205,7 @@ export default function ROWikiPage() {
                     {/* Hero Section */}
                     <div
                         id="overview"
-                        className="relative overflow-hidden rounded-xl border border-border/50 bg-ro-card theme-transition"
+                        className="relative overflow-hidden rounded-xl border border-border/50 bg-card theme-transition"
                     >
                         <div className="relative p-6 md:p-8 lg:p-10">
                             <div className="flex flex-col items-center text-center">
@@ -209,9 +214,9 @@ export default function ROWikiPage() {
                                     alt="RefinedObsidian Icon"
                                     width={96}
                                     height={96}
-                                    className="mb-4 animate-ro-pulse-glow"
+                                    className="mb-4 animate-pulse-glow"
                                 />
-                                <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl bg-ro-clip-text text-ro-transparent bg-ro-gradient-to-r from-ro-primary/90 to-ro-primary">
+                                <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-primary/90 to-primary">
                                     RefinedObsidian Wiki
                                 </h1>
                                 <p className="mt-4 max-w-3xl text-lg text-muted-foreground">
@@ -221,7 +226,7 @@ export default function ROWikiPage() {
                                 <div className="mt-6 flex flex-wrap justify-center gap-4">
                                     <Link href="/downloads">
                                         <Button
-                                            className="bg-ro-primary hover:bg-ro-primary/80 text-primary-foreground transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg hover:shadow-primary/20">
+                                            className="bg-primary hover:bg-primary/80 text-primary-foreground transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg hover:shadow-primary/20">
                                             Download Mod
                                         </Button>
                                     </Link>
@@ -234,34 +239,34 @@ export default function ROWikiPage() {
                     <section id="features" className="space-y-6">
                         <h2 className="text-2xl font-bold tracking-tight text-primary">Key Features</h2>
                         <Tabs defaultValue="items" className="w-full">
-                            <TabsList className="bg-ro-background border border-border/50 p-1 theme-transition">
+                            <TabsList className="bg-background border border-border/50 p-1 theme-transition">
                                 <TabsTrigger
                                     value="items"
-                                    className="transition-all data-[state=active]:bg-ro-primary/10 data-[state=active]:text-primary"
+                                    className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
                                 >
                                     Items
                                 </TabsTrigger>
                                 <TabsTrigger
                                     value="blocks"
-                                    className="transition-all data-[state=active]:bg-ro-primary/10 data-[state=active]:text-primary"
+                                    className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
                                 >
                                     Blocks
                                 </TabsTrigger>
                                 <TabsTrigger
                                     value="trims"
-                                    className="transition-all data-[state=active]:bg-ro-primary/10 data-[state=active]:text-primary"
+                                    className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
                                 >
                                     Armor Trims
                                 </TabsTrigger>
                             </TabsList>
                             <TabsContent
                                 value="items"
-                                className="mt-6 space-y-6 animate-ro-in fade-in-50 data-[state=inactive]:animate-ro-out data-[state=inactive]:fade-out-0"
+                                className="mt-6 space-y-6 animate-in fade-in-50 data-[state=inactive]:animate-out data-[state=inactive]:fade-out-0"
                             >
                                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                                    <div className="flex gap-4 group ro-hover-lift">
+                                    <div className="flex gap-4 group hover-lift">
                                         <div
-                                            className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-ro-card theme-transition group-hover:border-primary/50">
+                                            className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50">
                                             <Image
                                                 src="/assets/refinedobsidian/items/obsidian_dust.png"
                                                 alt="Obsidian Dust"
@@ -282,14 +287,14 @@ export default function ROWikiPage() {
                             </TabsContent>
                             <TabsContent
                                 value="blocks"
-                                className="mt-6 space-y-6 animate-ro-in fade-in-50 data-[state=inactive]:animate-ro-out data-[state=inactive]:fade-out-0"
+                                className="mt-6 space-y-6 animate-in fade-in-50 data-[state=inactive]:animate-out data-[state=inactive]:fade-out-0"
                             >
                                 <div className="flex items-center justify-between mb-4">
-                                    <Button className="hover:text-accent-foreground h-10 w-10 hover:bg-ro-primary/10" variant="ghost" size="icon" onClick={prevBlockPage}>
+                                    <Button className="hover:text-accent-foreground h-10 w-10 hover:bg-primary/10" variant="ghost" size="icon" onClick={prevBlockPage}>
                                         <ArrowLeft className="h-5 w-5 text-primary" />
                                     </Button>
                                     <span className="text-sm text-muted-foreground">Page {blockIndex + 1} of {blockPages.length}</span>
-                                    <Button className="hover:text-accent-foreground h-10 w-10 hover:bg-ro-primary/10" variant="ghost" size="icon" onClick={nextBlockPage}>
+                                    <Button className="hover:text-accent-foreground h-10 w-10 hover:bg-primary/10" variant="ghost" size="icon" onClick={nextBlockPage}>
                                         <ArrowRight className="h-5 w-5 text-primary" />
                                     </Button>
                                 </div>
@@ -302,14 +307,14 @@ export default function ROWikiPage() {
                             </TabsContent>
                             <TabsContent
                                 value="trims"
-                                className="mt-6 space-y-6 animate-ro-in fade-in-50 data-[state=inactive]:animate-ro-out data-[state=inactive]:fade-out-0"
+                                className="mt-6 space-y-6 animate-in fade-in-50 data-[state=inactive]:animate-out data-[state=inactive]:fade-out-0"
                             >
                                 <div className="flex items-center justify-between mb-4">
-                                    <Button className="hover:text-accent-foreground h-10 w-10 hover:bg-ro-primary/10" variant="ghost" size="icon" onClick={prevTrimsPage}>
+                                    <Button className="hover:text-accent-foreground h-10 w-10 hover:bg-primary/10" variant="ghost" size="icon" onClick={prevTrimsPage}>
                                         <ArrowLeft className="h-5 w-5 text-primary" />
                                     </Button>
                                     <span className="text-sm text-muted-foreground">Page {trimsIndex + 1} of {trimsPages.length}</span>
-                                    <Button className="hover:text-accent-foreground h-10 w-10 hover:bg-ro-primary/10" variant="ghost" size="icon" onClick={nextTrimsPage}>
+                                    <Button className="hover:text-accent-foreground h-10 w-10 hover:bg-primary/10" variant="ghost" size="icon" onClick={nextTrimsPage}>
                                         <ArrowRight className="h-5 w-5 text-primary" />
                                     </Button>
                                 </div>
@@ -326,10 +331,10 @@ export default function ROWikiPage() {
                         <h2 className="text-2xl font-bold tracking-tight text-primary">Recipe Guide</h2>
                         <div className="mb-4">
                             <Tabs defaultValue="crafting" className="w-full" onValueChange={setRecipeType}>
-                                <TabsList className="bg-ro-background border border-border/50 p-1 theme-transition">
+                                <TabsList className="bg-background border border-border/50 p-1 theme-transition">
                                     <TabsTrigger
                                         value="crafting"
-                                        className="transition-all data-[state=active]:bg-ro-primary/10 data-[state=active]:text-primary"
+                                        className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
                                     >
                                         <div className="w-6 h-6 mr-2">
                                             <img src="/assets/refinedobsidian/crafting.png" alt="Crafting Table" className="w-full h-full object-contain" />
@@ -338,7 +343,7 @@ export default function ROWikiPage() {
                                     </TabsTrigger>
                                     <TabsTrigger
                                         value="stonecutting"
-                                        className="transition-all data-[state=active]:bg-ro-primary/10 data-[state=active]:text-primary"
+                                        className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
                                     >
                                         <div className="w-6 h-6 mr-2">
                                             <img src="/assets/refinedobsidian/stonecutting.png" alt="Stonecutter" className="w-full h-full object-contain" />
@@ -347,7 +352,7 @@ export default function ROWikiPage() {
                                     </TabsTrigger>
                                     <TabsTrigger
                                         value="smelting"
-                                        className="transition-all data-[state=active]:bg-ro-primary/10 data-[state=active]:text-primary"
+                                        className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
                                     >
                                         <div className="w-6 h-6 mr-2">
                                             <img src="/assets/refinedobsidian/smelting.png" alt="Furnace" className="w-full h-full object-contain" />
@@ -356,7 +361,7 @@ export default function ROWikiPage() {
                                     </TabsTrigger>
                                     <TabsTrigger
                                         value="blasting"
-                                        className="transition-all data-[state=active]:bg-ro-primary/10 data-[state=active]:text-primary"
+                                        className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
                                     >
                                         <div className="w-6 h-6 mr-2">
                                             <img src="/assets/refinedobsidian/blasting.png" alt="Blast Furnace" className="w-full h-full object-contain" />
@@ -366,16 +371,16 @@ export default function ROWikiPage() {
                                 </TabsList>
                             </Tabs>
                         </div>
-                        <div className="rounded-lg border border-border/50 bg-ro-card p-6 ro-hover-glow theme-transition">
+                        <div className="rounded-lg border border-border/50 bg-card p-6 hover-glow theme-transition">
                             <div className="flex items-center justify-between mb-4">
                                 <Button variant="ghost" size="icon" onClick={prevRecipe}
-                                        className="hover:bg-ro-primary/10">
+                                        className="hover:bg-primary/10">
                                     <ArrowLeft className="h-5 w-5 text-primary"/>
                                     <span className="sr-only">Previous recipe</span>
                                 </Button>
                                 <h3 className="text-xl font-semibold text-primary">{filteredRecipes[currentRecipeIndex].name}</h3>
                                 <Button variant="ghost" size="icon" onClick={nextRecipe}
-                                        className="hover:bg-ro-primary/10">
+                                        className="hover:bg-primary/10">
                                     <ArrowRight className="h-5 w-5 text-primary"/>
                                     <span className="sr-only">Next recipe</span>
                                 </Button>
@@ -383,7 +388,7 @@ export default function ROWikiPage() {
                             <div className="grid grid-cols-1 gap-4 md:gap-6 md:grid-cols-2">
                                 <div className="flex justify-center">
                                     {recipeType === "crafting" && (
-                                        <div className="grid grid-cols-3 gap-1 rounded-lg border border-border/50 bg-ro-background p-2 theme-transition max-w-[250px] max-h-[250px]">
+                                        <div className="grid grid-cols-3 gap-1 rounded-lg border border-border/50 bg-background p-2 theme-transition max-w-[250px] max-h-[250px]">
                                             {Array.from({length: 9}).map((_, index) => {
                                                 const ingredient = filteredRecipes[currentRecipeIndex].ingredients.find(
                                                     (i) => i.position === index,
@@ -391,7 +396,7 @@ export default function ROWikiPage() {
                                                 return (
                                                     <div
                                                         key={index}
-                                                        className="aspect-square rounded border border-border/50 bg-ro-card/80 p-1 transition-all duration-300 hover:border-primary/50 hover:bg-ro-card theme-transition"
+                                                        className="aspect-square rounded border border-border/50 bg-card/80 p-1 transition-all duration-300 hover:border-primary/50 hover:bg-card theme-transition"
                                                     >
                                                         {ingredient && (
                                                             <div className="flex items-center justify-center">
@@ -408,9 +413,9 @@ export default function ROWikiPage() {
                                         </div>
                                     )}
                                     {recipeType === "stonecutting" && (
-                                        <div className="rounded-lg border border-border/50 bg-ro-background p-4 theme-transition max-w-[250px]">
+                                        <div className="rounded-lg border border-border/50 bg-background p-4 theme-transition max-w-[250px]">
                                             <div className="flex items-center gap-4">
-                                                <div className="aspect-square w-12 rounded border border-border/50 bg-ro-card/80 p-1">
+                                                <div className="aspect-square w-12 rounded border border-border/50 bg-card/80 p-1">
                                                     <div className="flex items-center justify-center">
                                                         <img
                                                             src={`/assets/refinedobsidian/items/${filteredRecipes[currentRecipeIndex].ingredients[0].name.toLowerCase().replace(/\s+/g, "_")}.png`}
@@ -427,9 +432,9 @@ export default function ROWikiPage() {
                                         </div>
                                     )}
                                     {recipeType === "smelting" && (
-                                        <div className="rounded-lg border border-border/50 bg-ro-background p-4 theme-transition max-w-[250px]">
+                                        <div className="rounded-lg border border-border/50 bg-background p-4 theme-transition max-w-[250px]">
                                             <div className="flex flex-col items-center gap-2">
-                                                <div className="aspect-square w-12 rounded border border-border/50 bg-ro-card/80 p-1">
+                                                <div className="aspect-square w-12 rounded border border-border/50 bg-card/80 p-1">
                                                     <div className="flex items-center justify-center">
                                                         <img
                                                             src={`/assets/refinedobsidian/items/${filteredRecipes[currentRecipeIndex].ingredients[0].name.toLowerCase().replace(/\s+/g, "_")}.png`}
@@ -438,15 +443,15 @@ export default function ROWikiPage() {
                                                         />
                                                     </div>
                                                 </div>
-                                                <Flame className="h-12 w-12 text-primary animate-ro-pulse"/>
+                                                <Flame className="h-12 w-12 text-primary animate-pulse"/>
                                                 <p className="text-xs text-muted-foreground">Furnace</p>
                                             </div>
                                         </div>
                                     )}
                                     {recipeType === "blasting" && (
-                                        <div className="rounded-lg border border-border/50 bg-ro-background p-4 theme-transition max-w-[250px]">
+                                        <div className="rounded-lg border border-border/50 bg-background p-4 theme-transition max-w-[250px]">
                                             <div className="flex flex-col items-center gap-2">
-                                                <div className="aspect-square w-12 rounded border border-border/50 bg-ro-card/80 p-1">
+                                                <div className="aspect-square w-12 rounded border border-border/50 bg-card/80 p-1">
                                                     <div className="flex items-center justify-center">
                                                         <img
                                                             src={`/assets/refinedobsidian/items/${filteredRecipes[currentRecipeIndex].ingredients[0].name.toLowerCase().replace(/\s+/g, "_")}.png`}
@@ -455,7 +460,7 @@ export default function ROWikiPage() {
                                                         />
                                                     </div>
                                                 </div>
-                                                <Flame className="h-12 w-12 text-primary animate-ro-pulse"/>
+                                                <Flame className="h-12 w-12 text-primary animate-pulse"/>
                                                 <p className="text-xs text-muted-foreground">Blast Furnace</p>
                                             </div>
                                         </div>
@@ -463,9 +468,9 @@ export default function ROWikiPage() {
                                 </div>
                                 <div className="flex items-center justify-center">
                                     <div className="flex flex-col md:flex-row items-center">
-                                        <ChevronRight className="h-8 w-8 md:h-12 md:w-12 text-primary animate-ro-pulse mb-2 md:mb-0" />
+                                        <ChevronRight className="h-8 w-8 md:h-12 md:w-12 text-primary animate-pulse mb-2 md:mb-0" />
                                         <div className="relative">
-                                            <div className="rounded border border-border/50 bg-ro-card/80 p-2 transition-all duration-300 hover:border-primary/50 hover:bg-ro-card hover:shadow-md hover:shadow-primary/20 theme-transition aspect-square w-[100px] md:w-[120px]">
+                                            <div className="rounded border border-border/50 bg-card/80 p-2 transition-all duration-300 hover:border-primary/50 hover:bg-card hover:shadow-md hover:shadow-primary/20 theme-transition aspect-square w-[100px] md:w-[120px]">
                                                 <div className="flex items-center justify-center">
                                                     <img
                                                         src={`/assets/refinedobsidian/items/${filteredRecipes[currentRecipeIndex].result.name.toLowerCase().replace(/\s+/g, "_")}.png`}
@@ -496,7 +501,7 @@ export default function ROWikiPage() {
                         <h2 className="text-2xl font-bold tracking-tight text-primary">Gallery</h2>
                         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                             <div
-                                className="overflow-hidden rounded-lg border border-border/50 group ro-hover-glow theme-transition">
+                                className="overflow-hidden rounded-lg border border-border/50 group hover-glow theme-transition">
                                 <Image
                                     src="/assets/refinedobsidian/gallery-1.jpg"
                                     alt="RefinedObsidian Overview"
@@ -506,7 +511,7 @@ export default function ROWikiPage() {
                                 />
                             </div>
                             <div
-                                className="overflow-hidden rounded-lg border border-border/50 group ro-hover-glow theme-transition">
+                                className="overflow-hidden rounded-lg border border-border/50 group hover-glow theme-transition">
                                 <Image
                                     src="/assets/refinedobsidian/gallery-2.jpg"
                                     alt="Block Palette"
@@ -516,7 +521,7 @@ export default function ROWikiPage() {
                                 />
                             </div>
                             <div
-                                className="overflow-hidden rounded-lg border border-border/50 group ro-hover-glow theme-transition">
+                                className="overflow-hidden rounded-lg border border-border/50 group hover-glow theme-transition">
                                 <Image
                                     src="/assets/refinedobsidian/gallery-3.jpg"
                                     alt="Building"
@@ -531,7 +536,7 @@ export default function ROWikiPage() {
                     {/* Compatibility */}
                     <section id="compatibility" className="space-y-6">
                         <h2 className="text-2xl font-bold tracking-tight text-primary">Compatibility</h2>
-                        <Card className="bg-ro-card border-border/50 ro-hover-scale theme-transition">
+                        <Card className="bg-card border-border/50 hover-scale theme-transition">
                             <div className="h-6"></div>
                             <CardContent className="space-y-6">
                                 <div>
@@ -581,7 +586,7 @@ export default function ROWikiPage() {
                     {/* Download */}
                     <section id="installation" className="space-y-6">
                         <h2 className="text-2xl font-bold tracking-tight text-primary">Download</h2>
-                        <div className="rounded-lg border border-border/50 bg-ro-card p-6 ro-hover-glow theme-transition">
+                        <div className="rounded-lg border border-border/50 bg-card p-6 hover-glow theme-transition">
                             <div className="flex flex-col items-center gap-4 text-center md:flex-row md:text-left">
                                 <div className="flex-1 space-y-2">
                                     <h3 className="text-xl font-bold text-primary">Get RefinedObsidian</h3>
@@ -593,14 +598,14 @@ export default function ROWikiPage() {
                                     <Link href="/downloads">
                                         <Button
                                             variant="outline"
-                                            className="border-primary text-primary hover:bg-ro-primary/10 transition-all duration-300 hover:scale-105"
+                                            className="border-primary text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-105"
                                         >
                                             All Versions
                                         </Button>
                                     </Link>
                                 </div>
                             </div>
-                            <Separator className="my-6 bg-ro-border/50"/>
+                            <Separator className="my-6 bg-border/50"/>
                             <div className="grid gap-4 md:grid-cols-3">
                                 <div className="space-y-2">
                                     <h4 className="font-medium text-primary">Requirements</h4>

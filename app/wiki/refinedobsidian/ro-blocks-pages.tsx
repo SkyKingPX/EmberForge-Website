@@ -3,7 +3,7 @@ import Image from "next/image"
 export function blocksPage1() {
     return (
         <>
-            <div className="flex gap-4 group ro-hover-lift">
+            <div className="flex gap-4 group hover-lift">
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
@@ -22,7 +22,7 @@ export function blocksPage1() {
                     </p>
                 </div>
             </div>
-            <div className="flex gap-4 group ro-hover-lift">
+            <div className="flex gap-4 group hover-lift">
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
@@ -41,7 +41,7 @@ export function blocksPage1() {
                     </p>
                 </div>
             </div>
-            <div className="flex gap-4 group ro-hover-lift">
+            <div className="flex gap-4 group hover-lift">
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
@@ -60,7 +60,7 @@ export function blocksPage1() {
                     </p>
                 </div>
             </div>
-            <div className="flex gap-4 group ro-hover-lift">
+            <div className="flex gap-4 group hover-lift">
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
@@ -86,7 +86,7 @@ export function blocksPage1() {
 export function blocksPage2() {
     return (
         <>
-            <div className="flex gap-4 group ro-hover-lift">
+            <div className="flex gap-4 group hover-lift">
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
@@ -105,7 +105,7 @@ export function blocksPage2() {
                     </p>
                 </div>
             </div>
-            <div className="flex gap-4 group ro-hover-lift">
+            <div className="flex gap-4 group hover-lift">
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
@@ -123,7 +123,7 @@ export function blocksPage2() {
                     </p>
                 </div>
             </div>
-            <div className="flex gap-4 group ro-hover-lift">
+            <div className="flex gap-4 group hover-lift">
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
@@ -142,7 +142,7 @@ export function blocksPage2() {
                     </p>
                 </div>
             </div>
-            <div className="flex gap-4 group ro-hover-lift">
+            <div className="flex gap-4 group hover-lift">
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
@@ -168,7 +168,7 @@ export function blocksPage2() {
 export function blocksPage3() {
     return (
         <>
-            <div className="flex gap-4 group ro-hover-lift">
+            <div className="flex gap-4 group hover-lift">
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
@@ -187,7 +187,7 @@ export function blocksPage3() {
                     </p>
                 </div>
             </div>
-            <div className="flex gap-4 group ro-hover-lift">
+            <div className="flex gap-4 group hover-lift">
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
@@ -205,7 +205,7 @@ export function blocksPage3() {
                     </p>
                 </div>
             </div>
-            <div className="flex gap-4 group ro-hover-lift">
+            <div className="flex gap-4 group hover-lift">
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
@@ -223,7 +223,7 @@ export function blocksPage3() {
                     </p>
                 </div>
             </div>
-            <div className="flex gap-4 group ro-hover-lift">
+            <div className="flex gap-4 group hover-lift">
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
@@ -249,7 +249,7 @@ export function blocksPage3() {
 export function blocksPage4() {
     return (
         <>
-            <div className="flex gap-4 group ro-hover-lift">
+            <div className="flex gap-4 group hover-lift">
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
@@ -268,7 +268,7 @@ export function blocksPage4() {
                     </p>
                 </div>
             </div>
-            <div className="flex gap-4 group ro-hover-lift">
+            <div className="flex gap-4 group hover-lift">
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
@@ -287,7 +287,7 @@ export function blocksPage4() {
                     </p>
                 </div>
             </div>
-            <div className="flex gap-4 group ro-hover-lift">
+            <div className="flex gap-4 group hover-lift">
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
@@ -306,7 +306,7 @@ export function blocksPage4() {
                     </p>
                 </div>
             </div>
-            <div className="flex gap-4 group ro-hover-lift">
+            <div className="flex gap-4 group hover-lift">
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
@@ -332,7 +332,7 @@ export function blocksPage4() {
 export function blocksPage5() {
     return (
         <>
-            <div className="flex gap-4 group ro-hover-lift">
+            <div className="flex gap-4 group hover-lift">
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
@@ -350,7 +350,7 @@ export function blocksPage5() {
                     </p>
                 </div>
             </div>
-            <div className="flex gap-4 group ro-hover-lift">
+            <div className="flex gap-4 group hover-lift">
                 <div
                     className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image

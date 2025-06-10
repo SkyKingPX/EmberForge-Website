@@ -3,7 +3,7 @@ import Image from "next/image"
 export function trimsPage1() {
     return (
         <>
-            <div className="flex gap-4 group ro-hover-lift">
+            <div className="flex gap-4 group hover-lift">
                 <div
                     className="h-180 w-180 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
@@ -21,7 +21,7 @@ export function trimsPage1() {
                     </p>
                 </div>
             </div>
-            <div className="flex gap-4 group ro-hover-lift">
+            <div className="flex gap-4 group hover-lift">
                 <div
                     className="h-180 w-180 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
@@ -46,7 +46,7 @@ export function trimsPage1() {
 export function trimsPage2() {
     return (
         <>
-            <div className="flex gap-4 group ro-hover-lift">
+            <div className="flex gap-4 group hover-lift">
                 <div
                     className="h-180 w-180 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
@@ -64,7 +64,7 @@ export function trimsPage2() {
                     </p>
                 </div>
             </div>
-            <div className="flex gap-4 group ro-hover-lift">
+            <div className="flex gap-4 group hover-lift">
                 <div
                     className="h-180 w-180 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
@@ -89,7 +89,7 @@ export function trimsPage2() {
 export function trimsPage3() {
     return (
         <>
-            <div className="flex gap-4 group ro-hover-lift">
+            <div className="flex gap-4 group hover-lift">
                 <div
                     className="h-180 w-180 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
@@ -107,7 +107,7 @@ export function trimsPage3() {
                     </p>
                 </div>
             </div>
-            <div className="flex gap-4 group ro-hover-lift">
+            <div className="flex gap-4 group hover-lift">
                 <div
                     className="h-180 w-180 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
@@ -132,7 +132,7 @@ export function trimsPage3() {
 export function trimsPage4() {
     return (
         <>
-            <div className="flex gap-4 group ro-hover-lift">
+            <div className="flex gap-4 group hover-lift">
                 <div
                     className="h-180 w-180 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                     <Image
