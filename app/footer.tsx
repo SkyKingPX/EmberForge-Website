@@ -126,7 +126,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                    href={`${LINKS.github_org}/repositories`}
+                    href={`${LINKS.github_repos}`}
                     className="text-foreground/70 hover:text-primary transition-colors hover-lift inline-flex items-center gap-2 group"
                 >
                   GitHub Repositories

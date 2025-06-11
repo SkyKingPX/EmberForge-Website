@@ -466,7 +466,7 @@ export default function Home() {
                                 </CardHeader>
                                 <CardFooter>
                                     <Button asChild>
-                                        <a href={`${LINKS.github_org}/repositories/`} target="_blank"
+                                        <a href={`${LINKS.github_repos}`} target="_blank"
                                            rel="noopener noreferrer">
                                             Visit GitHub <ArrowRight size={16} className="ml-2"/>
                                         </a>
