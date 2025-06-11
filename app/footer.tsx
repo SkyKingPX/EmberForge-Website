@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Github, Youtube, Mail, Heart, ExternalLink, Code, Users, MessageSquare } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
+import {LINKS} from "@/app/links";
 
 export default function Footer() {
   return (
@@ -74,7 +75,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#projects"
+                  href="/projects/"
                   className="text-foreground/70 hover:text-primary transition-colors hover-lift inline-flex items-center gap-2 group"
                 >
                   Our Projects
@@ -86,25 +87,16 @@ export default function Footer() {
                   href="#team"
                   className="text-foreground/70 hover:text-primary transition-colors hover-lift inline-flex items-center gap-2 group"
                 >
-                  Meet the Team
+                  Team
                   <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
-                  className="text-foreground/70 hover:text-primary transition-colors hover-lift inline-flex items-center gap-2 group"
+                    href="/downloads/"
+                    className="text-foreground/70 hover:text-primary transition-colors hover-lift inline-flex items-center gap-2 group"
                 >
-                  Documentation
-                  <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-foreground/70 hover:text-primary transition-colors hover-lift inline-flex items-center gap-2 group"
-                >
-                  Changelog
+                  Downloads
                   <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
               </li>
@@ -125,19 +117,19 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#"
+                  href="/wiki/"
                   className="text-foreground/70 hover:text-primary transition-colors hover-lift inline-flex items-center gap-2 group"
                 >
-                  Download Center
+                  Wiki & Guides
                   <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
-                  className="text-foreground/70 hover:text-primary transition-colors hover-lift inline-flex items-center gap-2 group"
+                    href={`${LINKS.github_org}/repositories`}
+                    className="text-foreground/70 hover:text-primary transition-colors hover-lift inline-flex items-center gap-2 group"
                 >
-                  Wiki & Guides
+                  GitHub Repositories
                   <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
               </li>
@@ -171,7 +163,7 @@ export default function Footer() {
                 Connect with other developers, get support, and stay updated with the latest news.
               </p>
               <Button className="w-full bg-[#5865F2] hover:bg-[#4752C4] text-white" asChild>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a href={`${LINKS.discord}`} target="_blank" rel="noopener noreferrer">
                   Join Discord Server
                 </a>
               </Button>

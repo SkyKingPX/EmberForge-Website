@@ -25,11 +25,12 @@ export default function Header({ scrollProgress }: HeaderProps) {
   }, [scrollProgress])
 
   const navItems = [
-    { name: "Home", href: "#hero" },
+    { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Projects", href: "#projects" },
     { name: "Team", href: "#team" },
-    { name: "Support", href: "#support" }
+    { name: "Support", href: "#support" },
+    { name: "Partners", href: "#partners" },
   ]
 
   return (
@@ -40,7 +41,7 @@ export default function Header({ scrollProgress }: HeaderProps) {
       )}
     >
       <div className="container mx-auto flex items-center justify-between">
-        <a href="#hero" className="flex items-center gap-2">
+        <a href="#home" className="flex items-center gap-2">
           <div className="relative w-8 h-8">
             <motion.div
               className="absolute inset-0 bg-primary rounded-full animate-pulse-glow"
