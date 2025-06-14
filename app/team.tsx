@@ -2,7 +2,7 @@
 
 import { useRef } from "react"
 import { motion } from "framer-motion"
-import { ChevronLeft, ChevronRight, Github, Youtube } from "lucide-react"
+import {ChevronLeft, ChevronRight, Github, Globe, Instagram, Twitch, Youtube} from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
@@ -25,49 +25,104 @@ export default function Team() {
 
   const teamMembers = [
     {
-      name: "SkyKing_PX",
-      role: "Founder & Team Lead",
-      image: "/placeholder.svg?height=200&width=200",
-      bio: "Bio.",
-      skills: ["Skills"],
+      name: "Bani",
+      role: "Founder, Organisation Manager, Mod- & Modpack Developer",
+      image: "/assets/team/bani.jpg?height=200&width=200",
+      bio: "I'm Bani, a 17-year-old from Croatia with a lifelong passion for computers and games.",
+      skills: [],
       social: {
-        github: "#",
+        github: "https://github.com/banikula",
         youtube: "#",
+        twitch: "#",
+        website: "#",
+        instagram: "#",
       },
     },
     {
-      name: "Bani",
-      role: "Founder & Modpack Developer",
-      image: "/placeholder.svg?height=200&width=200",
-      bio: "Bio.",
-      skills: ["Skills"],
+      name: "SkyKing_PX",
+      role: "Co-Founder & Team Lead",
+      image: "/assets/team/skyking_px.png?height=200&width=200",
+      bio: "A young German developer with a passion for Minecraft and coding.",
+      skills: ["Java", "Next.js", "PC Hardware"],
       social: {
-        github: "#",
-        youtube: "#",
+        github: "https://github.com/SkyKingPX",
+        youtube: "https://www.youtube.com/@SkyKingPX",
+        twitch: "https://www.twitch.tv/skyking_px",
+        website: "#",
+        instagram: "#",
+      },
+    },
+    {
+      name: "Kalarian Athecila",
+      role: "Developer & Lead of Content Creation",
+      image: "/assets/team/kalarianathecila.png?height=200&width=200",
+      bio: "A passionate Minecraft mod developer and WIndows modder.",
+      skills: ["Java", "C++", "JS", "CSS", "HTML", "Windows Mod Development"],
+      social: {
+        github: "https://github.com/KalarianAthecila",
+        youtube: "https://www.youtube.com/@SoncresityIndustries",
+        twitch: "#",
+        instagram: "https://www.instagram.com/soncresityindustries",
+        website: "#",
       },
     },
     {
       name: "Gentra",
-      role: "Content Creator & Modpack Developer",
-      image: "/placeholder.svg?height=200&width=200",
-      bio: "Bio.",
+      role: "Website developer",
+      image: "/assets/team/gentra.png?height=200&width=200",
+      bio: "I run ListenWink",
+      skills: ["Java", "HTML", "JS"],
+      social: {
+        github: "https://github.com/scabidi",
+        youtube: "https://www.youtube.com/@gentraxyz",
+        twitch: "#",
+        website: "https://listenwink.com/artist.php?username=Gentra",
+        instagram: "#",
+      },
+    },
+    {
+      name: "Mikeland",
+      role: "Accountant & Modpack Developer",
+      image: "/assets/team/mikeland.png?height=200&width=200",
+      bio: "I'm Mike, from Portugal. I've always loved computers and video games.",
       skills: ["Skills"],
       social: {
-        github: "#",
+        github: "https://github.com/mikeland2018",
         youtube: "#",
+        twitch: "#",
+        website: "#",
+        instagram: "#",
+      },
+    },
+    {
+      name: "Hyrrx",
+      role: "Mod & Modpack Developer",
+      image: "/assets/team/hyrrx.jpg?height=200&width=200",
+      bio: "Im a content creator.",
+      skills: ["Java", "JS", "HTML", "CSS"],
+      social: {
+        github: "https://github.com/Hyrrx",
+        youtube: "https://youtube.com/@hyrrx",
+        twitch: "#",
+        website: "#",
+        instagram: "#",
       },
     },
     {
       name: "etc",
       role: "/",
-      image: "/placeholder.svg?height=200&width=200",
+      image: "/assets/team/.png?height=200&width=200",
       bio: "Bio.",
       skills: ["Skills"],
       social: {
         github: "#",
         youtube: "#",
+        twitch: "#",
+        website: "#",
+        instagram: "#",
       },
-    }
+    },
+
   ]
 
   return (
@@ -167,18 +222,46 @@ export default function Team() {
                     </div>
                   </CardContent>
                   <CardFooter className="flex justify-center gap-3">
-                    <Button size="sm" variant="ghost" className="w-9 h-9 p-0 rounded-full" asChild>
-                      <a href={member.social.github} target="_blank" rel="noopener noreferrer">
-                        <Github size={16} />
-                        <span className="sr-only">GitHub</span>
-                      </a>
-                    </Button>
-                    <Button size="sm" variant="ghost" className="w-9 h-9 p-0 rounded-full" asChild>
-                      <a href={member.social.youtube} target="_blank" rel="noopener noreferrer">
-                        <Youtube size={16} />
-                        <span className="sr-only">YouTube</span>
-                      </a>
-                    </Button>
+                    {member.social.github !== "#" && (
+                        <Button size="sm" variant="ghost" className="w-9 h-9 p-0 rounded-full" asChild>
+                          <a href={member.social.github} target="_blank" rel="noopener noreferrer">
+                            <Github size={16}/>
+                            <span className="sr-only">GitHub</span>
+                          </a>
+                        </Button>
+                    )}
+                    {member.social.website !== "#" && (
+                        <Button size="sm" variant="ghost" className="w-9 h-9 p-0 rounded-full" asChild>
+                          <a href={member.social.twitch} target="_blank" rel="noopener noreferrer">
+                            <Globe size={16}/>
+                            <span className="sr-only">Website</span>
+                          </a>
+                        </Button>
+                    )}
+                    {member.social.youtube !== "#" && (
+                        <Button size="sm" variant="ghost" className="w-9 h-9 p-0 rounded-full" asChild>
+                          <a href={member.social.youtube} target="_blank" rel="noopener noreferrer">
+                            <Youtube size={16}/>
+                            <span className="sr-only">YouTube</span>
+                          </a>
+                        </Button>
+                    )}
+                    {member.social.twitch !== "#" && (
+                        <Button size="sm" variant="ghost" className="w-9 h-9 p-0 rounded-full" asChild>
+                          <a href={member.social.twitch} target="_blank" rel="noopener noreferrer">
+                            <Twitch size={16}/>
+                            <span className="sr-only">Twitch</span>
+                          </a>
+                        </Button>
+                    )}
+                    {member.social.instagram !== "#" && (
+                        <Button size="sm" variant="ghost" className="w-9 h-9 p-0 rounded-full" asChild>
+                          <a href={member.social.instagram} target="_blank" rel="noopener noreferrer">
+                            <Instagram size={16}/>
+                            <span className="sr-only">Instagram</span>
+                          </a>
+                        </Button>
+                    )}
                   </CardFooter>
                 </Card>
               </motion.div>
