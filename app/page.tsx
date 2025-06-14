@@ -683,7 +683,7 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
-                <section id="si" className="mt-12">
+                <section id="si" className={`py-10 md:py-22 relative overflow-hidden ${sectionTopSpacing}`}>
                     <div className="container mx-auto px-4">
                         <div className="text-center max-w-3xl mx-auto mb-16">
                             <motion.h2
@@ -693,11 +693,12 @@ export default function Home() {
                                 viewport={{once: true}}
                                 transition={{duration: 0.5}}
                             >
-                                <img src="/assets/partners/soncresityindustries-logo.png"
+                                <img src="/assets/partners/si-logo.png"
                                      alt="SoncresityIndustries Logo"
                                      className="w-16 h-16 mr-4 inline-block"
                                 />
-                                <span className="bg-gradient-to-r from-[#bfdff5] to-[#2f87c3] text-transparent bg-clip-text">Sonc</span><span className="bg-gradient-to-r from-[#2f87c3] to-[#026dca] text-transparent bg-clip-text">resityIndu</span><span className="bg-gradient-to-r from-[#026dca] to-[#7ca9d1] text-transparent bg-clip-text">stries</span>
+                                <span
+                                    className="bg-gradient-to-r from-[#2F97DD] to-[#026DCA] text-transparent bg-clip-text">Soncresity Industries</span>
                             </motion.h2>
                             <motion.p
                                 className="text-lg text-foreground/80"
@@ -706,38 +707,53 @@ export default function Home() {
                                 viewport={{once: true}}
                                 transition={{duration: 0.5, delay: 0.1}}
                             >
-                                Bottom Text
+                                Soncresity Industries is a group of developers making Minecraft mods, a modded Windows client and way more.
                             </motion.p>
+                            <div className="flex justify-center gap-4 mt-6">
+                                <Button
+                                    className="bg-[#5865F2] hover:bg-[#4752C4] text-white hover-scale"
+                                    asChild
+                                >
+                                    <a href="https://discord.com/invite/uqbQvAHHve" target="_blank" rel="noopener noreferrer">
+                                        Discord Server <ArrowRight className="ml-2 h-4 w-4"/>
+                                    </a>
+                                </Button>
+                                <Button
+                                    className="bg-[#FF0000] hover:bg-[#CC0000] text-white hover-scale"
+                                    asChild
+                                >
+                                    <a href="https://www.youtube.com/@SoncresityIndustries" target="_blank" rel="noopener noreferrer">
+                                        YouTube Channel <ArrowRight className="ml-2 h-4 w-4"/>
+                                    </a>
+                                </Button>
+                                <Button
+                                    variant="outline"
+                                    className="hover-scale"
+                                    asChild
+                                >
+                                    <a href="https://www.taplink.cc/soncresityindustries" target="_blank" rel="noopener noreferrer">
+                                        Other Socials <ArrowRight className="ml-2 h-4 w-4"/>
+                                    </a>
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </section>
-                <section id="gentraai">
+                <section id="gentraai" className={`py-10 md:py-10 pt-0 relative overflow-hidden ${sectionTopSpacing}`}>
                     <div className="container mx-auto px-4">
                         <div className="text-center max-w-3xl mx-auto mb-16">
                             <motion.h2
                                 className="text-2xl md:text-3xl font-bold mb-4"
-                                initial={{opacity: 0, y: 15}}
+                                initial={{opacity: 0, y: 10}}
                                 whileInView={{opacity: 1, y: 0}}
                                 viewport={{once: true}}
                                 transition={{duration: 0.5}}
                             >
-                                <span
-                                    className="bg-gradient-to-r from-[#845EC2] to-[#D65DB1] text-transparent bg-clip-text">GentraAI</span>
-                                <div className="relative w-48 h-48 mx-auto mb-4">
-                                    <img
-                                        src="/assets/partners/GentraAI.png"
-                                        alt="GentraAI Logo"
-                                        className="w-full h-full object-contain"
-                                    />
-                                    <div
-                                        className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background opacity-50"></div>
-                                    <div
-                                        className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background opacity-50"></div>
-                                    <div
-                                        className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background opacity-50"></div>
-                                    <div
-                                        className="absolute inset-0 bg-gradient-to-l from-background via-transparent to-background opacity-50"></div>
-                                </div>
+                                <img
+                                    src="/assets/partners/GentraAI.png"
+                                    alt="GentraAI Logo"
+                                    className="w-64 h-24 object-contain mx-auto"
+                                />
                             </motion.h2>
                             <motion.p
                                 className="text-lg text-foreground/80"
@@ -750,7 +766,7 @@ export default function Home() {
                             </motion.p>
                             <div className="mt-6">
                                 <Button
-                                    className="bg-gradient-to-r from-[#845EC2] to-[#D65DB1] hover:opacity-90 text-white hover-scale"
+                                    className="bg-gradient-to-r from-[#16f9fb] to-[#fa1a95] hover:opacity-90 text-white hover-scale"
                                     asChild
                                 >
                                     <a href="https://gentra.xyz" target="_blank" rel="noopener noreferrer">
