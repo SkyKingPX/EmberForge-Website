@@ -12,10 +12,11 @@ import Team from "@/app/team"
 import Footer from "@/app/footer"
 import {LINKS} from "@/app/links";
 import {useTheme} from "next-themes";
+import {projects} from "./project-list"
 
 export default function Home() {
-    // Configurable spacing for sections
-    const sectionTopSpacing = "pt-16 mt-8" // Can be adjusted as needed
+
+    const sectionTopSpacing = "pt-16 mt-8"
 
     const {theme} = useTheme()
     const {scrollYProgress} = useScroll()
@@ -26,10 +27,11 @@ export default function Home() {
     const projectsControls = useAnimation()
     const teamControls = useAnimation()
 
-    // Refs for detecting when sections are in view
-    const aboutRef = useRef<HTMLElement>(null)
-    const projectsRef = useRef<HTMLElement>(null)
     const teamRef = useRef<HTMLElement>(null)
+    const projectsRef = useRef<HTMLElement>(null)
+    const aboutRef = useRef<HTMLElement>(null)
+
+    const filteredProjects = activeTab === "All" ? projects : projects.filter((project) => project.category === activeTab)
 
     // Check if elements are in view
     useEffect(() => {
@@ -60,27 +62,6 @@ export default function Home() {
             if (teamRef.current) observer.unobserve(teamRef.current)
         }
     }, [aboutControls, projectsControls, teamControls])
-
-    // Projects data
-    const projects = [
-        {
-            id: 1,
-            title: "RefinedObsidian",
-            description: "A Minecraft Mod by EmberForge Development that adds various obsidian-themed items, blocks and armor trims.",
-            wikiid: "refinedobsidian",
-            image: "/assets/refinedobsidian/gallery-1.jpg?height=300&width=500",
-            category: "Mod",
-            tags: ["Building", "Armor Trims"],
-            //downloads: "",
-            links: {
-                github: LINKS.ro_github_repo,
-                modrinth: LINKS.ro_modrinth_project,
-                curseforge: LINKS.ro_curseforge_project,
-            }
-        }
-    ]
-
-    const filteredProjects = activeTab === "All" ? projects : projects.filter((project) => project.category === activeTab)
 
     // About section features
     const features = [
