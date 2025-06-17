@@ -695,7 +695,7 @@ export default function Home() {
                             >
                                 Soncresity Industries is a group of developers making Minecraft mods, a modded Windows client and way more.
                             </motion.p>
-                            <div className="flex justify-center gap-4 mt-6">
+                            <div className="flex flex-wrap justify-center gap-4 mt-6">
                                 <Button
                                     className="bg-[#5865F2] hover:bg-[#4752C4] text-white hover-scale"
                                     asChild
