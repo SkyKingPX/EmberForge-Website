@@ -100,21 +100,6 @@ export default function Footer() {
                   <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
               </li>
-            </ul>
-          </motion.div>
-
-          {/* Support & Community */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <h3 className="font-bold text-lg mb-6 flex items-center gap-2">
-              <Users size={18} className="text-primary" />
-              Support
-            </h3>
-            <ul className="space-y-3">
               <li>
                 <a
                   href="/wiki/"
