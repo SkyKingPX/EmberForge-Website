@@ -103,77 +103,84 @@ export default function Projects() {
                         </div>
 
                         <TabsContent value={activeTab} className="mt-0">
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {filteredProjects.map((project, index) => (
-                                    <motion.div
-                                        key={project.id}
-                                        initial={{opacity: 0, y: 30}}
-                                        whileInView={{opacity: 1, y: 0}}
-                                        viewport={{once: true}}
-                                        transition={{duration: 0.5, delay: index * 0.1}}
-                                    >
-                                        <Card className="overflow-hidden hover-scale h-full border-border/50">
-                                            <div className="aspect-video relative overflow-hidden">
-                                                <img
-                                                    src={project.image}
-                                                    alt={project.title}
-                                                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                                                />
-                                            </div>
-                                            <CardHeader>
-                                                <div className="flex flex-wrap gap-2 mb-2">
-                                                    <Badge className="text-xs">
-                                                        {project.category}
-                                                    </Badge>
-                                                    {project.tags.map((tag, i) => (
-                                                        <Badge key={i} variant="outline" className="text-xs">
-                                                            {tag}
+                            {filteredProjects.length === 0 ? (
+                                <div className="text-center text-foreground/70 italic py-12">
+                                    <p>No Projects found in that category!</p>
+                                    <p>We will steadily increase our library of Mods, Modpacks and more, so stay tuned!</p>
+                                </div>
+                            ) : (
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                    {filteredProjects.map((project, index) => (
+                                        <motion.div
+                                            key={project.id}
+                                            initial={{opacity: 0, y: 30}}
+                                            whileInView={{opacity: 1, y: 0}}
+                                            viewport={{once: true}}
+                                            transition={{duration: 0.5, delay: index * 0.1}}
+                                        >
+                                            <Card className="overflow-hidden hover-scale h-full border-border/50">
+                                                <div className="aspect-video relative overflow-hidden">
+                                                    <img
+                                                        src={project.image}
+                                                        alt={project.title}
+                                                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                                                    />
+                                                </div>
+                                                <CardHeader>
+                                                    <div className="flex flex-wrap gap-2 mb-2">
+                                                        <Badge className="text-xs">
+                                                            {project.category}
                                                         </Badge>
-                                                    ))}
-                                                </div>
-                                                <CardTitle className="line-clamp-1">{project.title}</CardTitle>
-                                                <CardDescription
-                                                    className="text-foreground/70 line-clamp-2">{project.description}</CardDescription>
-                                            </CardHeader>
-                                            <CardFooter className="flex justify-between">
-                                                <div className="flex gap-2">
-                                                    <Button size="sm" variant="ghost" className="w-9 h-9 p-0" asChild>
-                                                        <a href={project.links.github} target="_blank"
-                                                           rel="noopener noreferrer">
-                                                            <img src="/assets/github.svg" alt="GitHub" width={20}
-                                                                 height={20}
-                                                                 className={`${theme === 'light' ? 'invert' : ''} h-5 w-5`}/>
-                                                            <span className="sr-only">GitHub</span>
+                                                        {project.tags.map((tag, i) => (
+                                                            <Badge key={i} variant="outline" className="text-xs">
+                                                                {tag}
+                                                            </Badge>
+                                                        ))}
+                                                    </div>
+                                                    <CardTitle className="line-clamp-1">{project.title}</CardTitle>
+                                                    <CardDescription
+                                                        className="text-foreground/70 line-clamp-2">{project.description}</CardDescription>
+                                                </CardHeader>
+                                                <CardFooter className="flex justify-between">
+                                                    <div className="flex gap-2">
+                                                        <Button size="sm" variant="ghost" className="w-9 h-9 p-0" asChild>
+                                                            <a href={project.links.github} target="_blank"
+                                                               rel="noopener noreferrer">
+                                                                <img src="/assets/github.svg" alt="GitHub" width={20}
+                                                                     height={20}
+                                                                     className={`${theme === 'light' ? 'invert' : ''} h-5 w-5`}/>
+                                                                <span className="sr-only">GitHub</span>
+                                                            </a>
+                                                        </Button>
+                                                        <Button size="sm" variant="ghost" className="w-9 h-9 p-0" asChild>
+                                                            <a href={project.links.curseforge} target="_blank"
+                                                               rel="noopener noreferrer">
+                                                                <img src="/assets/curseforge.svg" alt="CurseForge"
+                                                                     width={20} height={20}
+                                                                     className={`${theme === 'light' ? 'invert' : ''} h-5 w-5`}/>
+                                                                <span className="sr-only">CurseForge</span>
+                                                            </a>
+                                                        </Button>
+                                                        <Button size="sm" variant="ghost" className="w-9 h-9 p-0" asChild>
+                                                            <a href={project.links.modrinth} target="_blank"
+                                                               rel="noopener noreferrer">
+                                                                <img src="/assets/modrinth.png" alt="Modrinth"
+                                                                     className="h-5 w-5"/>
+                                                                <span className="sr-only">Modrinth</span>
+                                                            </a>
+                                                        </Button>
+                                                    </div>
+                                                    <Button size="sm" variant="default" className="gap-1" asChild>
+                                                        <a href={`/wiki/${project.wikiid}`}>
+                                                            Wiki <ArrowRight size={14}/>
                                                         </a>
                                                     </Button>
-                                                    <Button size="sm" variant="ghost" className="w-9 h-9 p-0" asChild>
-                                                        <a href={project.links.curseforge} target="_blank"
-                                                           rel="noopener noreferrer">
-                                                            <img src="/assets/curseforge.svg" alt="CurseForge"
-                                                                 width={20} height={20}
-                                                                 className={`${theme === 'light' ? 'invert' : ''} h-5 w-5`}/>
-                                                            <span className="sr-only">CurseForge</span>
-                                                        </a>
-                                                    </Button>
-                                                    <Button size="sm" variant="ghost" className="w-9 h-9 p-0" asChild>
-                                                        <a href={project.links.modrinth} target="_blank"
-                                                           rel="noopener noreferrer">
-                                                            <img src="/assets/modrinth.png" alt="Modrinth"
-                                                                 className="h-5 w-5"/>
-                                                            <span className="sr-only">Modrinth</span>
-                                                        </a>
-                                                    </Button>
-                                                </div>
-                                                <Button size="sm" variant="default" className="gap-1" asChild>
-                                                    <a href={`/wiki/${project.wikiid}`}>
-                                                        Wiki <ArrowRight size={14}/>
-                                                    </a>
-                                                </Button>
-                                            </CardFooter>
-                                        </Card>
-                                    </motion.div>
-                                ))}
-                            </div>
+                                                </CardFooter>
+                                            </Card>
+                                        </motion.div>
+                                    ))}
+                                </div>
+                            )}
                         </TabsContent>
                     </Tabs>
                 </div>

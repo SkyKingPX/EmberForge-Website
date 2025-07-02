@@ -35,7 +35,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-3">
               <Button size="icon" variant="ghost" className="rounded-full hover-lift hover-glow" asChild>
-                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <a href={`${LINKS.github_org}`} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <Github size={20} />
                 </a>
               </Button>
@@ -45,7 +45,7 @@ export default function Footer() {
                 </a>
               </Button>
               <Button size="icon" variant="ghost" className="rounded-full hover-lift hover-glow" asChild>
-                <a href="mailto:contact@emberforge.dev" aria-label="Email">
+                <a href="mailto:business@emberforge.dev" aria-label="Email">
                   <Mail size={20} />
                 </a>
               </Button>
@@ -66,7 +66,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#about"
+                  href="/#about"
                   className="text-foreground/70 hover:text-primary transition-colors hover-lift inline-flex items-center gap-2 group"
                 >
                   About Us
@@ -84,7 +84,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#team"
+                  href="/#team"
                   className="text-foreground/70 hover:text-primary transition-colors hover-lift inline-flex items-center gap-2 group"
                 >
                   Team
@@ -100,21 +100,6 @@ export default function Footer() {
                   <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
               </li>
-            </ul>
-          </motion.div>
-
-          {/* Support & Community */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <h3 className="font-bold text-lg mb-6 flex items-center gap-2">
-              <Users size={18} className="text-primary" />
-              Support
-            </h3>
-            <ul className="space-y-3">
               <li>
                 <a
                   href="/wiki/"
