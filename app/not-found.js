@@ -37,7 +37,7 @@ export default function NotFound() {
             <main className="flex-grow flex items-center justify-center p-6 relative pt-16 overflow-hidden">
                 <Header scrollProgress={scrollYProgress}/>
 
-                <div className="max-w-md w-full mx-auto text-center">
+                <div className="max-w-md w-full mx-auto pt-18 mt-8 text-center">
                     <motion.div
                         initial={{scale: 0.8, opacity: 0}}
                         animate={{scale: 4, opacity: 1}}
@@ -76,8 +76,8 @@ export default function NotFound() {
                         </div>
                     </motion.div>
                 </div>
-                <Footer/>
             </main>
+            <Footer/>
         </div>
     )
 }
