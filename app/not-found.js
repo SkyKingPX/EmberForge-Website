@@ -3,15 +3,18 @@
 import {useState, useEffect} from 'react'
 import Link from 'next/link'
 import {ArrowLeft, Home} from 'lucide-react'
-import {motion} from 'framer-motion'
+import {motion, useScroll} from 'framer-motion'
 import {Button} from '@/components/ui/button'
+import {useTheme} from "next-themes";
 import Header from '@/app/header'
 import Footer from '@/app/footer'
 
 export default function NotFound() {
     const [mounted, setMounted] = useState(false)
+    const {theme} = useTheme()
+    const {scrollYProgress} = useScroll()
+    const [activeTab, setActiveTab] = useState("All")
 
-    // Verhindere Hydration-Fehler
     useEffect(() => {
         setMounted(true)
     }, [])
@@ -30,9 +33,10 @@ export default function NotFound() {
 
     return (
         <div className="min-h-screen flex flex-col">
-            <Header/>
 
-            <main className="flex-grow flex items-center justify-center p-6">
+            <main className="flex-grow flex items-center justify-center p-6 relative pt-16 overflow-hidden">
+                <Header scrollProgress={scrollYProgress}/>
+
                 <div className="max-w-md w-full mx-auto text-center">
                     <motion.div
                         initial={{scale: 0.8, opacity: 0}}
