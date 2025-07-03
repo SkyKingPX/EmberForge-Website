@@ -5,9 +5,8 @@ import Link from 'next/link'
 import {ArrowLeft, Home} from 'lucide-react'
 import {motion} from 'framer-motion'
 import {Button} from '@/components/ui/button'
-import {ThemeToggle} from '@/components/theme-toggle'
-import Header from '@/app/Header'
-import Footer from '@/app/Footer'
+import Header from '@/app/header'
+import Footer from '@/app/footer'
 
 export default function NotFound() {
     const [mounted, setMounted] = useState(false)
