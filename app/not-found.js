@@ -6,6 +6,8 @@ import {ArrowLeft, Home} from 'lucide-react'
 import {motion} from 'framer-motion'
 import {Button} from '@/components/ui/button'
 import {ThemeToggle} from '@/components/theme-toggle'
+import Header from '@/app/Header'
+import Footer from '@/app/Footer'
 
 export default function NotFound() {
     const [mounted, setMounted] = useState(false)
@@ -29,15 +31,7 @@ export default function NotFound() {
 
     return (
         <div className="min-h-screen flex flex-col">
-            <header
-                className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur theme-transition mb-8">
-                <div className="container flex h-16 items-center justify-between">
-                    <div className="flex items-center gap-2">
-                        <Link href="/" className="font-bold text-xl text-primary">EmberForge</Link>
-                    </div>
-                    <ThemeToggle/>
-                </div>
-            </header>
+            <Header/>
 
             <main className="flex-grow flex items-center justify-center p-6">
                 <div className="max-w-md w-full mx-auto text-center">
@@ -79,13 +73,8 @@ export default function NotFound() {
                         </div>
                     </motion.div>
                 </div>
+                <Footer/>
             </main>
-
-            <footer className="py-6 border-t border-border/40">
-                <div className="container text-center text-sm text-muted-foreground">
-                    <p>© {new Date().getFullYear()} EmberForge Development | All Rights Reserved</p>
-                </div>
-            </footer>
         </div>
     )
 }
