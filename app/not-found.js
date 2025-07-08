@@ -3,14 +3,18 @@
 import {useState, useEffect} from 'react'
 import Link from 'next/link'
 import {ArrowLeft, Home} from 'lucide-react'
-import {motion} from 'framer-motion'
+import {motion, useScroll} from 'framer-motion'
 import {Button} from '@/components/ui/button'
-import {ThemeToggle} from '@/components/theme-toggle'
+import {useTheme} from "next-themes";
+import Header from '@/app/header'
+import Footer from '@/app/footer'
 
 export default function NotFound() {
     const [mounted, setMounted] = useState(false)
+    const {theme} = useTheme()
+    const {scrollYProgress} = useScroll()
+    const [activeTab, setActiveTab] = useState("All")
 
-    // Verhindere Hydration-Fehler
     useEffect(() => {
         setMounted(true)
     }, [])
@@ -29,18 +33,11 @@ export default function NotFound() {
 
     return (
         <div className="min-h-screen flex flex-col">
-            <header
-                className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur theme-transition mb-8">
-                <div className="container flex h-16 items-center justify-between">
-                    <div className="flex items-center gap-2">
-                        <Link href="/" className="font-bold text-xl text-primary">EmberForge</Link>
-                    </div>
-                    <ThemeToggle/>
-                </div>
-            </header>
 
-            <main className="flex-grow flex items-center justify-center p-6">
-                <div className="max-w-md w-full mx-auto text-center">
+            <main className="flex-grow flex items-center justify-center p-6 relative pt-16 overflow-hidden">
+                <Header scrollProgress={scrollYProgress}/>
+
+                <div className="max-w-md w-full mx-auto pt-18 mt-8 text-center">
                     <motion.div
                         initial={{scale: 0.8, opacity: 0}}
                         animate={{scale: 4, opacity: 1}}
@@ -80,12 +77,7 @@ export default function NotFound() {
                     </motion.div>
                 </div>
             </main>
-
-            <footer className="py-6 border-t border-border/40">
-                <div className="container text-center text-sm text-muted-foreground">
-                    <p>© {new Date().getFullYear()} EmberForge Development | All Rights Reserved</p>
-                </div>
-            </footer>
+            <Footer/>
         </div>
     )
 }
